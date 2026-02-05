@@ -37,6 +37,11 @@ def get_player_url(url: str) -> str:
         return f'https://player.marshmallowapi.workers.dev?video={url}'
     else:
         return f'https://player.marshmallowapi.workers.dev?video={url}'
+        elif 'https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove' in url:
+        # Use marshmallow player for this CloudFront domain
+        return f'https://player.marshmallowapi.workers.dev?video={url}'
+    else:
+        return f'https://player.marshmallowapi.workers.dev?video={url}'
 
 client = Client("itsgolu_html_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
